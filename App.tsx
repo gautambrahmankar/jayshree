@@ -89,7 +89,7 @@ export default function App() {
 
           <div className="flex items-center gap-4">
             <button className="hidden md:block bg-primary hover:bg-primary/90 text-[#121811] font-bold py-2 px-6 rounded-lg transition-all text-sm shadow-md">
-              Get in Touch
+              <a href="tel:+918224013800">Call Us </a>
             </button>
             <button className="md:hidden text-gray-700 dark:text-gray-300" onClick={toggleMenu}>
               {isMenuOpen ? <X /> : <Menu />}
@@ -105,7 +105,7 @@ export default function App() {
             <a href="#products" className="block text-lg font-semibold" onClick={toggleMenu}>Products</a>
             <a href="#gallery" className="block text-lg font-semibold" onClick={toggleMenu}>Gallery</a>
             <a href="#contact" className="block text-lg font-semibold" onClick={toggleMenu}>Contact</a>
-            <button className="w-full bg-primary text-[#121811] font-bold py-3 rounded-lg">Get in Touch</button>
+            <button className="w-full bg-primary text-[#121811] font-bold py-3 rounded-lg"><a href="tel:+918224013800">Call Us</a></button>
           </div>
         )}
       </header>
@@ -128,11 +128,11 @@ export default function App() {
               </div>
               <div className="flex flex-wrap gap-4">
                 <button className="bg-primary hover:scale-105 transition-transform text-[#121811] font-bold h-14 px-8 rounded-xl flex items-center gap-2 shadow-lg">
-                  Explore Our History
-                  <ArrowRight className="w-5 h-5" />
+                <nav><NavLink href="#about" active={activeSection === 'about'}>
+                  Explore Our History</NavLink></nav>
                 </button>
                 <button className="border-2 border-gray-200 dark:border-white/10 hover:border-primary text-[#121811] dark:text-white font-bold h-14 px-8 rounded-xl transition-all">
-                  Our Verticals
+                  <nav><NavLink href="#companies" active={activeSection === 'companies'}>Our Verticals</NavLink></nav>
                 </button>
               </div>
             </div>
@@ -200,7 +200,13 @@ export default function App() {
             <h2 className="text-4xl md:text-5xl font-black mb-6">About Jayshree Group</h2>
             <div className="w-24 h-2 bg-primary mx-auto mb-10 rounded-full"></div>
             <p className="text-xl text-gray-700 dark:text-gray-300 leading-relaxed mb-16">
-              Since our inception in 1970, Jayshree Group has evolved from a local farm into a diverse conglomerate. Our journey is defined by a relentless pursuit of excellence and a deep-seated commitment to the communities we serve. Our commitment to biosecurity and modern technology has made us a trusted name in the poultry industry, ensuring that quality is never compromised.
+            Founded in 1970 by the visionary S.S. Brahmankar, a true pioneer in the field of agriculture, Jayshree Group was born from a spirit of innovation and a commitment to regional development. As the first enterprise to introduce commercial layer egg production to Chhattisgarh, Mr. Brahmankar laid a foundation built on "tried and tested" methods combined with a constant thirst for technical knowledge. His leadership transformed a local farm into a respected name, taking the company to new heights by prioritizing quality above all else.
+            </p>
+            <p className="text-xl text-gray-700 dark:text-gray-300 leading-relaxed mb-16">
+            Today, as we navigate our fifth decade of successful operations, Jayshree Group has evolved from its humble beginnings into a diverse and integrated conglomerate. Our growth is defined by a relentless pursuit of excellence and a deep-seated commitment to the communities we serve. We have expanded our expertise far beyond our initial roots, successfully managing a complex ecosystem that spans broiler breeding, hatchery operations, and large-scale broiler farming.
+            </p>
+            <p className="text-xl text-gray-700 dark:text-gray-300 leading-relaxed mb-16">
+            This expansion is fueled by our unwavering dedication to modern technology and world-class biosecurity. By controlling the entire lifecycle—from manufacturing high-quality feed to managing our own distribution, packaging, and logistics—we ensure that our standards for excellence are never compromised. Our footprint even extends into the energy sector through our strategic fuel station operations, reflecting the versatile nature of our group. Five decades later, we remain a trusted name in the poultry industry, honoring our founder’s legacy by ensuring that every venture we touch is synonymous with quality and integrity.
             </p>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-12">
               <div className="flex flex-col items-center gap-4 group">
@@ -421,7 +427,7 @@ export default function App() {
                   </div>
                   <div>
                     <p className="text-xs font-bold text-gray-400 uppercase tracking-widest mb-1">Email</p>
-                    <p className="text-xl font-bold">contact@jayshreegroup.com</p>
+                    <p className="text-xl font-bold">info@jayshree-group.com</p>
                   </div>
                 </div>
                 <div className="flex items-center gap-6 group">
@@ -430,7 +436,7 @@ export default function App() {
                   </div>
                   <div>
                     <p className="text-xs font-bold text-gray-400 uppercase tracking-widest mb-1">Phone</p>
-                    <p className="text-xl font-bold">+91 123 456 7890</p>
+                    <p className="text-xl font-bold">+91 8224013800</p>
                   </div>
                 </div>
                 <div className="flex items-center gap-6 group">
@@ -439,7 +445,7 @@ export default function App() {
                   </div>
                   <div>
                     <p className="text-xs font-bold text-gray-400 uppercase tracking-widest mb-1">Address</p>
-                    <p className="text-xl font-bold">Headquarters, Industrial Zone, Poultry City, India</p>
+                    <p className="text-xl font-bold"> Dhanshree estate, Devpuri, Raipur, Chhattisgarh 492015</p>
                   </div>
                 </div>
               </div>
@@ -502,14 +508,14 @@ export default function App() {
               </div>
               <div>
                 <h4 className="font-extrabold text-lg">Jayshree HQ</h4>
-                <p className="text-xs text-gray-500 font-bold uppercase tracking-tight">Industrial Park, Sector 4</p>
+                <p className="text-xs text-gray-500 font-bold uppercase tracking-tight">Devpuri</p>
               </div>
             </div>
             <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
-              Headquarters, Industrial Zone, Poultry City, India
+            Dhanshree estate,Devpuri,Chhattisgarh 492015
             </p>
             <a 
-              href="https://maps.google.com/?q=Jayshree+Group+Poultry+India" 
+              href="https://maps.app.goo.gl/DwPxsecV9TE72bWm7" 
               target="_blank" 
               rel="noopener noreferrer"
               className="w-full bg-primary hover:bg-primary/90 text-[#121811] font-bold py-3 rounded-xl flex items-center justify-center gap-2 text-sm transition-all"
