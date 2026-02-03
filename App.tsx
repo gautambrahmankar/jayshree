@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { 
   Menu, X, ArrowRight, ChevronRight, TrendingUp, ChevronDown, 
@@ -7,6 +6,7 @@ import {
   Mail, MapPin, Linkedin, Twitter, Facebook, Globe, Lock, Send,
   Navigation
 } from 'lucide-react';
+import { DotLottieReact } from '@lottiefiles/dotlottie-react';
 
 // --- Types ---
 interface NavLinkProps {
@@ -41,6 +41,7 @@ const Card: React.FC<{ children: React.ReactNode; className?: string }> = ({ chi
 export default function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('home');
+  const [showStartScreen, setShowStartScreen] = useState(true);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -63,6 +64,49 @@ export default function App() {
   }, []);
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
+
+  const handleAnimationComplete = () => {
+    setShowStartScreen(false);
+  };
+
+  // Fallback timeout in case onComplete doesn't fire (adjust duration as needed)
+  useEffect(() => {
+    if (showStartScreen) {
+      const timer = setTimeout(() => {
+        setShowStartScreen(false);
+      }, 5000); // 5 seconds fallback - adjust based on your animation length
+      
+      return () => clearTimeout(timer);
+    }
+  }, [showStartScreen]);
+
+  // Start Screen
+  if (showStartScreen) {
+    return (
+      <div style={{
+        position: 'fixed',
+        top: 0,
+        left: 0,
+        width: '100vw',
+        height: '100vh',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        backgroundColor: '#ffffff', // Change this to your desired color
+        zIndex: 9999
+      }}>
+        <DotLottieReact
+          src="https://lottie.host/e1d017d5-f759-487c-949b-0b9b79c4da66/K2eZg7vQ4R.lottie"
+          loop={false}
+          autoplay
+          onComplete={handleAnimationComplete}
+          onLoopComplete={handleAnimationComplete}
+          onLoad={() => console.log('Animation loaded')}
+          style={{ width: '600px', height: '600px' }}
+        />
+      </div>
+    );
+  }
 
   return (
     <div className="min-h-screen text-[#121811] dark:text-white transition-colors">
@@ -127,13 +171,16 @@ export default function App() {
                 </p>
               </div>
               <div className="flex flex-wrap gap-4">
+              <nav><NavLink href="#about" active={activeSection === 'about'}>
                 <button className="bg-primary hover:scale-105 transition-transform text-[#121811] font-bold h-14 px-8 rounded-xl flex items-center gap-2 shadow-lg">
-                <nav><NavLink href="#about" active={activeSection === 'about'}>
-                  Explore Our History</NavLink></nav>
+                  Explore Our History
                 </button>
+                </NavLink></nav>
+                <nav><NavLink href="#companies" active={activeSection === 'companies'}>
                 <button className="border-2 border-gray-200 dark:border-white/10 hover:border-primary text-[#121811] dark:text-white font-bold h-14 px-8 rounded-xl transition-all">
-                  <nav><NavLink href="#companies" active={activeSection === 'companies'}>Our Verticals</NavLink></nav>
+                  Our Verticals
                 </button>
+                </NavLink></nav>
               </div>
             </div>
             <div className="relative order-1 lg:order-2">
@@ -195,7 +242,7 @@ export default function App() {
         </section>
 
         {/* About Section */}
-        <section className="py-24 px-4 md:px-8 lg:px-20">
+        <section id="about" className="py-24 px-4 md:px-8 lg:px-20">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl md:text-5xl font-black mb-6">About Jayshree Group</h2>
             <div className="w-24 h-2 bg-primary mx-auto mb-10 rounded-full"></div>
@@ -206,7 +253,7 @@ export default function App() {
             Today, as we navigate our fifth decade of successful operations, Jayshree Group has evolved from its humble beginnings into a diverse and integrated conglomerate. Our growth is defined by a relentless pursuit of excellence and a deep-seated commitment to the communities we serve. We have expanded our expertise far beyond our initial roots, successfully managing a complex ecosystem that spans broiler breeding, hatchery operations, and large-scale broiler farming.
             </p>
             <p className="text-xl text-gray-700 dark:text-gray-300 leading-relaxed mb-16">
-            This expansion is fueled by our unwavering dedication to modern technology and world-class biosecurity. By controlling the entire lifecycle—from manufacturing high-quality feed to managing our own distribution, packaging, and logistics—we ensure that our standards for excellence are never compromised. Our footprint even extends into the energy sector through our strategic fuel station operations, reflecting the versatile nature of our group. Five decades later, we remain a trusted name in the poultry industry, honoring our founder’s legacy by ensuring that every venture we touch is synonymous with quality and integrity.
+            This expansion is fueled by our unwavering dedication to modern technology and world-class biosecurity. By controlling the entire lifecycle—from manufacturing high-quality feed to managing our own distribution, packaging, and logistics—we ensure that our standards for excellence are never compromised. Our footprint even extends into the energy sector through our strategic fuel station operations, reflecting the versatile nature of our group. Five decades later, we remain a trusted name in the poultry industry, honoring our founder's legacy by ensuring that every venture we touch is synonymous with quality and integrity.
             </p>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-12">
               <div className="flex flex-col items-center gap-4 group">
