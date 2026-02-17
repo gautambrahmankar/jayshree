@@ -74,7 +74,7 @@ export default function App() {
     if (showStartScreen) {
       const timer = setTimeout(() => {
         setShowStartScreen(false);
-      }, 5000); // 5 seconds fallback - adjust based on your animation length
+      }, 6000); // 6 seconds fallback - adjust based on your animation length
       
       return () => clearTimeout(timer);
     }
@@ -111,11 +111,11 @@ export default function App() {
   return (
     <div className="min-h-screen text-[#121811] dark:text-white transition-colors">
       {/* Header */}
-      <header className="sticky top-0 z-50 bg-white/90 dark:bg-background-dark/90 backdrop-blur-md border-b border-gray-200 dark:border-white/10 px-4 md:px-8 lg:px-20 py-4">
+      <header className="sticky top-0 z-50 bg-white/90 dark:bg-background-dark/90 backdrop-blur-md border-b border-gray-200 dark:border-white/10 px-4 md:px-8 lg:px-20 py-2">
         <div className="max-w-7xl mx-auto flex items-center justify-between">
           <div className="flex items-center gap-2">
             <div className="text-primary">
-              <ShieldCheck className="w-10 h-10" />
+              <img src="logos/jayshree2.png" alt="Jayshree Group Logo" className="w-24 h-24 object-contain" />
             </div>
             <h1 className="text-xl font-extrabold tracking-tight">
               Jayshree <span className="text-primary">Group</span>
@@ -305,14 +305,14 @@ export default function App() {
               <Card className="group cursor-pointer">
                 <div className="aspect-square overflow-hidden relative">
                   <img 
-                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuDiCspd7F0KcbF2eqKm2Dr42jd84njGr1LkxbQC_kd0GJYcxQQAYS_x_b1qL5KpDbRFNZqeC-_eqGbBEc8jrGM9Q4rFAyHSk0R0ZPPsS1bVr-Knfu519dgOiNI-julOJYBOKSHtcmmNa9QSC6q8SYmgToNLjNOfsZAteWIg8UtEaSN81-GR1B--erpqoK1MJ6d1uaL2-Z47-eL_lwwJG4Qq9l1RqzUDuIPJa_fpp5bvSTt9ijEmRYebyOkKgBsrsl9-7om8t60aVGPE" 
+                    src="logos/sumanpoultryfarm.jpg" 
                     alt="Egg Production"
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                   />
                   <div className="absolute inset-0 bg-primary/0 group-hover:bg-primary/10 transition-colors"></div>
                 </div>
                 <div className="p-8">
-                  <h3 className="text-2xl font-bold mb-3 group-hover:text-primary transition-colors">Egg Production</h3>
+                  <h3 className="text-2xl font-bold mb-3 group-hover:text-primary transition-colors">Suman Poultry Farm</h3>
                   <p className="text-gray-500 dark:text-gray-400 leading-relaxed">State-of-the-art layering farms producing millions of high-quality eggs daily under strict hygiene controls.</p>
                 </div>
               </Card>
@@ -320,14 +320,59 @@ export default function App() {
               <Card className="group cursor-pointer">
                 <div className="aspect-square overflow-hidden relative">
                   <img 
-                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuAhF6br-wBjwkwH3JvyBFu5nkt_sPKlSXxfKYH7QeToFaTOKoy-kjovVKl8OiEoldSY4UhnXbc0TVzZx58bOvzXbCnDV2abJ67QnIeIuFNlSBrGPPMjoBi4ucpYJ56czA0Titv54RkHCC_N0LlYV0z8iJnNW27rFTvgzMttZlJ2qU0ixRnbnh0GJXBFAkdY05_H-95ac5crQ4wm6KdtSIQ-gmqmOTLBqjFbchpCV16Nqpxe9mcbh5rTvmS5fXSayusiX6XDZyYgl9kP" 
-                    alt="Feed Milling"
+                    src="logos/shpl.jpeg" 
+                    alt="Suman Hatcheries"
+                    className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-110"
+                  />
+                  <div className="absolute inset-0 bg-primary/0 group-hover:bg-primary/10 transition-colors"></div>
+                </div>
+                <div className="p-8">
+                  <h3 className="text-2xl font-bold mb-3 group-hover:text-primary transition-colors">Suman Hatcheries</h3>
+                  <p className="text-gray-500 dark:text-gray-400 leading-relaxed">Breeding excellence through superior genetics and controlled environmental conditions for day-old chicks.</p>
+                </div>
+              </Card>
+
+              <Card className="group cursor-pointer">
+                <div className="aspect-square overflow-hidden relative">
+                  <img 
+                    src="logos/upscaled/sblogistics.png" 
+                    alt="SB Logistics"
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                   />
                   <div className="absolute inset-0 bg-primary/0 group-hover:bg-primary/10 transition-colors"></div>
                 </div>
                 <div className="p-8">
-                  <h3 className="text-2xl font-bold mb-3 group-hover:text-primary transition-colors">Feed Milling</h3>
+                  <h3 className="text-2xl font-bold mb-3 group-hover:text-primary transition-colors">SB Logistics</h3>
+                  <p className="text-gray-500 dark:text-gray-400 leading-relaxed">Specialized Poultry Logistic Services</p>
+                </div>
+              </Card>
+
+              <Card className="group cursor-pointer">
+                <div className="aspect-square overflow-hidden relative">
+                  <img 
+                    src="logos/upscaled/sumanpreservatives.png" 
+                    alt="Suman Preservatives"
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  />
+                  <div className="absolute inset-0 bg-primary/0 group-hover:bg-primary/10 transition-colors"></div>
+                </div>
+                <div className="p-8">
+                  <h3 className="text-2xl font-bold mb-3 group-hover:text-primary transition-colors">Suman Preservatives</h3>
+                  <p className="text-gray-500 dark:text-gray-400 leading-relaxed">Commercial Farming & Integration</p>
+                </div>
+              </Card>
+
+              <Card className="group cursor-pointer">
+                <div className="aspect-square overflow-hidden relative">
+                  <img 
+                    src="logos/poshakfeeds.png" 
+                    alt="Poshak Feeds"
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  />
+                  <div className="absolute inset-0 bg-primary/0 group-hover:bg-primary/10 transition-colors"></div>
+                </div>
+                <div className="p-8">
+                  <h3 className="text-2xl font-bold mb-3 group-hover:text-primary transition-colors">Poshak Feeds</h3>
                   <p className="text-gray-500 dark:text-gray-400 leading-relaxed">Customized nutritional poultry feed optimized for maximum health, immunity, and productivity of flocks.</p>
                 </div>
               </Card>
@@ -335,15 +380,45 @@ export default function App() {
               <Card className="group cursor-pointer">
                 <div className="aspect-square overflow-hidden relative">
                   <img 
-                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuDJ_AbDkqSPgh2L0FEzY7qHHpoWp9rpthFHbha5tSf7fMKBxd2kMmKJwnKqCNwd2-9tqMfN3zy8hsyhQc4Qi--feYFC_KZFCDXiHagAB9a-jf1_-WxrXh160rx98IyFwH8ztiL-N4h7XEtHoasFZwJ53t-5yCiuzzRX13oyvTjPunx9NiNKkTJHdygNmg85b_zlYHjyODZRLrEmcEdWN80orQPfyIFxFleyiAv9y8mQfkU4HIEJ4L7661ZsIjtYLAR0SuEmgRg_Aler" 
-                    alt="Hatcheries"
+                    src="logos/upscaled/jyotipaper.png" 
+                    alt="SB Logistics"
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                   />
                   <div className="absolute inset-0 bg-primary/0 group-hover:bg-primary/10 transition-colors"></div>
                 </div>
                 <div className="p-8">
-                  <h3 className="text-2xl font-bold mb-3 group-hover:text-primary transition-colors">Hatcheries</h3>
-                  <p className="text-gray-500 dark:text-gray-400 leading-relaxed">Breeding excellence through superior genetics and controlled environmental conditions for day-old chicks.</p>
+                  <h3 className="text-2xl font-bold mb-3 group-hover:text-primary transition-colors">Jyoti Paper</h3>
+                  <p className="text-gray-500 dark:text-gray-400 leading-relaxed">Manufacturing Chick Boxes, Egg Box & Broodind Roll</p>
+                </div>
+              </Card>
+
+              <Card className="group cursor-pointer">
+                <div className="aspect-square overflow-hidden relative">
+                  <img 
+                    src="logos/upscaled/brahmankarkrishifarm.png" 
+                    alt="Brahmankar Krishi Farm"
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  />
+                  <div className="absolute inset-0 bg-primary/0 group-hover:bg-primary/10 transition-colors"></div>
+                </div>
+                <div className="p-8">
+                  <h3 className="text-2xl font-bold mb-3 group-hover:text-primary transition-colors">Brahmankar Krishi Farm</h3>
+                  <p className="text-gray-500 dark:text-gray-400 leading-relaxed">Agriculture/Horticulture/Organic Farming</p>
+                </div>
+              </Card>
+
+              <Card className="group cursor-pointer">
+                <div className="aspect-square overflow-hidden relative">
+                  <img 
+                    src="logos/upscaled/highwaychowpatty.png" 
+                    alt="Highway Chowpatty"
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  />
+                  <div className="absolute inset-0 bg-primary/0 group-hover:bg-primary/10 transition-colors"></div>
+                </div>
+                <div className="p-8">
+                  <h3 className="text-2xl font-bold mb-3 group-hover:text-primary transition-colors">Highway Chowpatty</h3>
+                  <p className="text-gray-500 dark:text-gray-400 leading-relaxed">Veg & Non-Veg Family Restaurant Located at Sadak Chirchari</p>
                 </div>
               </Card>
             </div>
@@ -388,7 +463,7 @@ export default function App() {
                 { title: "Table Eggs", desc: "Farm-fresh, nutrient-rich table eggs for daily consumption.", img: "https://lh3.googleusercontent.com/aida-public/AB6AXuAM5yWaBlrUsre4CzG6qsdO8-2cTVAcE5HQAVybVeiNLeGqrfoG_j6yjVekMfiPCG7oSs95cbAjoBZSzBmwUoxP0GaHON-7GmNzFrwq6m-ny3mrhkcAsv61LRtQTcCN95l8Z--8nKnkjStmGfjiYadXgbhU3AYEstaji2wQm4eJy3ZXEwpizHWp3WRUOFirI6CErlEt72xitI8iF_fsl1S4lHHed9KTPnxPRRFsMLvydoAFw-aoyw6uvyWH-PhPLW2G_6pjtP19sCb7" },
                 { title: "Hatching Eggs", desc: "Premium quality fertile eggs from our selected breeder stock.", img: "https://lh3.googleusercontent.com/aida-public/AB6AXuA6bqSb_Jep4nHFeN9U955q64qLCTwNxty7POuJD6xc3TAtiu7GIW7xapUh1X45ffb3FFwHGRy2aE_BmbR9PSTNe8cpZGkI1fdOZZfLaxu33KbGzYI3vIOvJq2jp7TRlr8Fw8Wfi8q8KS_K472aPeQDs07qh_uhAOBb1iCplBZZP-TqeMiId09nXSuiE-CkimKMXEYO25-fLy2n6Vr3rF4EL2C5jMekmTroCylFTQDppMusbthuTXuhAzLqD3JLU2reIrkvndSCYVXD" },
                 { title: "Day-old Chicks", desc: "Robust, vaccinated broiler chicks with high growth potential.", img: "https://lh3.googleusercontent.com/aida-public/AB6AXuA3w52B7QeDdTd6KoIEPgEJTxS8ErTDavvLKHzsOgQstUFr17Yo_3mH6LoQkjLZ--qShO8cHWpibt3yDoPp0Hqqk_yKZp2gHiMzw5awxsMoXF_9QuXaJNGpD8YOPURIiPBZ0EJOawKJ73Jdj3yL2Owv0cjO03XutM5LtNK0uBzVEGt5jS9_Cl01b9CjYJanhh7E5qwFqVerXpITvVhIZj4z62dms4SBk8L-V8_NB3uTVhR9_1WgJWb5J2lcOXQyasKSgsk3wvE-vfz3" },
-                { title: "Broiler Meat", desc: "Hygienically processed tender meat available in various cuts.", img: "https://lh3.googleusercontent.com/aida-public/AB6AXuAu1b_vSCITkVjymtOCdkduRLmehBbpTS5PyN4n9I5uqAQYrHVCIaRjV2m3x1U9ozHW-gIejJVlZD4xUeCuZSSiUZ5p62O917SUrWat1pea8e4PKIzLtoem-dnNot8QT7A61OezrL2_juqa5uGbiepAPhoPrC5mIV5JUuj9e8mExvmBeVs5cpfhRfb9UbcvV-HRnJqiw77gkPGV-tfkPdxhmNt3eG-GGuGv8gla_HBb3udRr3M2g896HlhKtvVKtyDR8L61c8HO8X66" },
+                { title: "Broiler Meat", desc: "Hygienically processed tender meat available in various cuts.", img: "logos/chicken.jpg" },
                 { title: "Poultry Feed", desc: "High-conversion growth formulas for different life stages.", img: "https://lh3.googleusercontent.com/aida-public/AB6AXuDeqv1yWnhrE30KYt1xyZJwFRkbSO3oBBx7-6629x19zgmXyHaW5yxL1sJlDgMJwwEBb-dMrHrdYxuQnezb55WL2BL1RD_h5JPu_05xNJtzpM7LQx3HIyIJSiJ6q6c9sdaA7Esof0tjVyhQNP_0aFOhJMSoy8U--xAXSoN6VrWlMZv7NqZPu5MTpMVY2W4Hz8tEqQNuSo3vhL9S_oy1SIt_vzS0vHE04B7C2fkF0LN24xDcI8l7aPS8hpqFWrcmmxp93rdA81OqDdHC" },
                 { title: "Organic Manure", desc: "Natural nitrogen-rich fertilizer for sustainable agriculture.", img: "https://lh3.googleusercontent.com/aida-public/AB6AXuBkIDtA7KsXxs8ixy_dpX-2uZL3Q9aUOTZHu9wCx2-7Plpy97j5A571mIgvqSao4OdzOeXtyxc0SYJcg2zB6OCHM2ftqNNM0piRoxjZaf5HaiKuQxD7jaCom2ccHGh-74Ex87JcSuXFEiuN1--FDrbcnJb6Tdmlycsd1i-kFTeUs1HVktUGj8b-JGrUmaQ5sVJFLDTbqBPd20OAh_UZof3M3E0KAfknkBEMwFkXckPlxWGLdKyZjPZw_-v82EM9Zu0xChSiyEu4-wfs" },
                 { title: "Specialty Supplements", desc: "Essential health, immunity and growth boosters.", img: "https://lh3.googleusercontent.com/aida-public/AB6AXuAOAPcC4Z3WQ9aMPjkeOB08JHYQ48VeB4pfLHi3s9nSGhCI6XjX6teBC6EgYCRH5WlkBrctrKCG2d7MpEbbBkr-0j1dwbvtn8bwAvSLqsH2RNDjV1LswfLUC7o0QIiGFV9Ubw0i_F2qEmUprJcNl6mUQXEEy9oeUVfMhMurY5_S4TL7H9Mg6IhOQmPfrnpQA3KIPDCVGUBojGYlnNGK1lNsxJtLlusotLTn_oRUoD5fVee02QaBaJePpz3qFMtlJ5rWVLa_EXSWIdzN" },
@@ -434,20 +509,23 @@ export default function App() {
         <section id="gallery" className="py-24 px-4 md:px-8 lg:px-20 bg-gray-50 dark:bg-black/10">
           <div className="max-w-7xl mx-auto">
             <h2 className="text-4xl font-black mb-4">Our Operations Gallery</h2>
-            <p className="text-gray-500 dark:text-gray-400 text-lg mb-16">Glimpses into our world-class poultry infrastructure and ethical farming practices.</p>
+            <p className="text-gray-500 dark:text-gray-400 text-lg mb-16">A legacy of excellence in showcasing the multi-sector operations that define the Jayshree Group portfolio.</p>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {[
-                { title: "State-of-the-art Bio-security", desc: "Advanced climate control systems for optimal bird health.", img: "https://lh3.googleusercontent.com/aida-public/AB6AXuBTk39HSHbLyyneNt89RVXf_9V4_9vCkx5XNcenCdvMYBMmI2CgTSyWGQakehcXmwI-n0A25eu_NGjcKjrCoxIn4BFJZU8AP3o2q8Krv4KfyJq26oIme4oxf3KVnEzlgDEMn9KhUSFw7rXSIfitV72F6XQcxm9RmYPwp7jB7OiCk1EQLOb8gvVdv4rKE38BlcvV8stD1QJb0Q6CcRqEwS5k2USuB76G9YhA_UkhR4yliL2WQSKyTo8CtH20gCGdbpN9ufPHn3eIu3wI" },
-                { title: "Sustainable Farming", desc: "Eco-friendly waste management and renewable energy usage.", img: "https://lh3.googleusercontent.com/aida-public/AB6AXuAM5yWaBlrUsre4CzG6qsdO8-2cTVAcE5HQAVybVeiNLeGqrfoG_j6yjVekMfiPCG7oSs95cbAjoBZSzBmwUoxP0GaHON-7GmNzFrwq6m-ny3mrhkcAsv61LRtQTcCN95l8Z--8nKnkjStmGfjiYadXgbhU3AYEstaji2wQm4eJy3ZXEwpizHWp3WRUOFirI6CErlEt72xitI8iF_fsl1S4lHHed9KTPnxPRRFsMLvydoAFw-aoyw6uvyWH-PhPLW2G_6pjtP19sCb7" },
-                { title: "Global Distribution", desc: "Efficient logistics network ensuring fresh delivery across regions.", img: "https://lh3.googleusercontent.com/aida-public/AB6AXuAhF6br-wBjwkwH3JvyBFu5nkt_sPKlSXxfKYH7QeToFaTOKoy-kjovVKl8OiEoldSY4UhnXbc0TVzZx58bOvzXbCnDV2abJ67QnIeIuFNlSBrGPPMjoBi4ucpYJ56czA0Titv54RkHCC_N0LlYV0z8iJnNW27rFTvgzMttZlJ2qU0ixRnbnh0GJXBFAkdY05_H-95ac5crQ4wm6KdtSIQ-gmqmOTLBqjFbchpCV16Nqpxe9mcbh5rTvmS5fXSayusiX6XDZyYgl9kP" },
+                { title: "Jayshree Chicken Shop", desc: "A network of premium retail outlets across Chhattisgarh, bringing farm-fresh quality directly to consumers with gold-standard hygiene and safety.", img: "company_img/chickenshop.jpg" },
+                { title: "Inside Our Poultry Shed", desc: "A glimpse into our climate-controlled environments where we leverage five decades of expertise and modern technology to prioritize bird health and biosecurity.", img: "company_img/inpoultryfarm.jpeg" },
+                { title: "Poultry Farm", desc: "Engineered for excellence, our advanced housing facilities are designed to maximize natural ventilation and durability, ensuring a superior environment for livestock.", img: "company_img/poultryfarm.jpg" },
+                { title: "SB Logistics ", desc: "Powered by our dedicated fleet and specialized logistics network to ensure seamless, temperature-controlled delivery across the region.", img: "company_img/trucks.jpeg" },
+                { title: "Highway Chowpatty", desc: "Located at Sadak Chirchari, our signature family restaurant serves as a premier culinary landmark and a trusted stop for travelers seeking quality and comfort.", img: "company_img/highwaychowpatty.jpeg" },
+                { title: "Jio Petrol Pump", desc: "Our Deopuri-based energy venture provides a reliable source of high-quality fuel and service, continuing the Jayshree Group’s legacy of diverse community service.", img: "company_img/reliancepump.jpeg" },
               ].map((item, i) => (
                 <div key={i} className="flex flex-col gap-6 group">
                   <div className="aspect-video bg-gray-200 rounded-2xl overflow-hidden shadow-lg">
                     <img 
                       src={item.img} 
                       alt={item.title} 
-                      className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700"
+                      className="w-full h-full object-cover group-hover:grayscale-0 transition-all duration-700"
                     />
                   </div>
                   <div>
@@ -579,7 +657,7 @@ export default function App() {
           <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-20">
             <div className="col-span-1 md:col-span-1">
               <div className="flex items-center gap-3 mb-8">
-                <ShieldCheck className="w-10 h-10 text-primary" />
+                <img src="logos/jayshree2.png" alt="Jayshree Group Logo" className="w-32 h-32 object-contain" />
                 <h2 className="text-2xl font-extrabold tracking-tight">Jayshree <span className="text-primary">Group</span></h2>
               </div>
               <p className="text-gray-500 dark:text-gray-400 leading-relaxed mb-8">
